@@ -47,75 +47,41 @@ Esta API permite o cadastro, consulta, atualização e exclusão de usuários. O
 ## Estrutura do Projeto
 - `main.py`: arquivo principal com toda a lógica da API
 - `usuarios.db`: banco de dados SQLite gerado automaticamente
+- `test_main.py`: testes automatizados dos endpoints
 
-## Endpoints da API
+## Testes Automatizados (Quality Assurance)
 
-### 1. Cadastro de Usuário
-- **POST** `/usuarios`
-- **Body Exemplo:**
-  ```json
-  {
-    "nome": "João Silva",
-    "email": "joao@email.com",
-    "senha": "senha123"
-  }
-  ```
-- **Validações:**
-  - E-mail deve ser válido
-  - Senha deve ter pelo menos 6 caracteres
-  - E-mail não pode ser duplicado
+O projeto inclui testes automatizados para garantir a qualidade e o correto funcionamento da API, cobrindo os seguintes cenários:
+- Cadastro de usuário
+- Consulta de usuários (listar todos e buscar por ID)
+- Atualização de dados do usuário
+- Exclusão de usuário
+- Validação de dados (e-mail e senha)
 
-### 2. Listar Todos os Usuários
-- **GET** `/usuarios`
-- **Resposta:** Lista de usuários cadastrados
+### Ferramentas utilizadas para testes
+- **pytest**: framework de testes
+- **httpx**: cliente HTTP assíncrono para testar endpoints
 
-### 3. Buscar Usuário por ID
-- **GET** `/usuarios/{id}`
-- **Resposta:** Dados do usuário ou erro se não encontrado
+### Instalação das dependências de teste
+```bash
+pip install pytest httpx
+```
 
-### 4. Atualizar Usuário
-- **PUT** `/usuarios/{id}`
-- **Body Exemplo:**
-  ```json
-  {
-    "nome": "João Silva",
-    "email": "joao@email.com",
-    "senha": "novaSenha123"
-  }
-  ```
-- **Validações:** Iguais ao cadastro
+### Como rodar os testes
+```bash
+pytest
+```
 
-### 5. Excluir Usuário
-- **DELETE** `/usuarios/{id}`
-- **Resposta:** Mensagem de sucesso ou erro se não encontrado
+Os testes estão no arquivo `test_main.py` e cobrem todos os cenários exigidos pela atividade.
 
-## Cenários de Teste
-1. **Cadastro de usuário:**
-   - Testar cadastro com dados válidos e inválidos
-   - Testar cadastro com e-mail já existente
-2. **Consulta de usuários:**
-   - Listar todos
-   - Buscar por ID existente e inexistente
-3. **Atualização de dados:**
-   - Atualizar usuário existente
-   - Tentar atualizar usuário inexistente
-   - Testar validações
-4. **Exclusão de usuário:**
-   - Excluir usuário existente
-   - Tentar excluir usuário inexistente
-5. **Validação de dados:**
-   - E-mail inválido
-   - Senha curta
-   - Campos obrigatórios vazios
+### Testes manuais
+Você pode testar manualmente usando o Postman ou a interface Swagger UI disponível em [http://localhost:8000/docs](http://localhost:8000/docs).
 
 ## Organização do Grupo
-- **Desenvolvimento:** Todos
-- **Testes:** Emily
-- **Documentação:** Joice
-- **Apresentação:** Luiz
+- Desenvolvimento: Todos
+- Testes: Emily
+- Documentação: Joice
+- Apresentação: Luiz
 
-## Observações
-- O banco de dados é criado automaticamente ao rodar a API.
-- Utilize o Postman ou a documentação Swagger para testar as rotas.
-- Para dúvidas ou melhorias, entre em contato com o grupo.
-
+---
+Projeto desenvolvido para a disciplina de Engenharia de Software - UNIFECAF
