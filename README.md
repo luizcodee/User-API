@@ -1,132 +1,4 @@
 <<<<<<< HEAD
-# 🧪 QA – Testes de API de Usuários
-
-Projeto desenvolvido para a disciplina de Quality Assurance, com foco na validação de uma API de gerenciamento de usuários.
-
----
-
-## 🎯 Objetivo
-
-Garantir a qualidade da API validando as principais funcionalidades:
-
-* Cadastro de usuários
-* Listagem de usuários
-* Busca por ID
-* Atualização de dados
-* Exclusão de usuários
-
----
-
-## 🔗 API utilizada
-
-Projeto original desenvolvido por Luiz:
-https://github.com/luizcodee/User-API
-
----
-
-## 👩‍💻 Meu papel no projeto
-
-* Criação de casos de teste
-* Execução de testes manuais (Postman)
-* Validação de regras de negócio
-* Documentação dos testes
-* Identificação e registro de bugs
-
----
-
-## 🧪 Tipos de testes realizados
-
-### ✔ Testes funcionais
-
-* Cadastro
-* Listagem
-* Busca por ID
-* Atualização
-* Exclusão
-
-### ❌ Testes de validação
-
-* Email inválido
-* Senha curta
-* ID inexistente
-
----
-
-## 🐞 Bugs identificados
-
-* Cadastro permitido com nome vazio
-* Inconsistência na validação de senha
-
-📄 Mais detalhes em:
-docs/relatorio-bugs.md
-
----
-
-## 📸 Evidências
-
-As evidências dos testes estão disponíveis em:
-
-📁 docs/evidencias/
-
----
-
-## 🧾 Casos de teste
-
-Documentação completa disponível em:
-
-📄 docs/casos-de-teste.md
-
----
-
-## ⚙️ Testes automatizados
-
-Testes automatizados implementados com:
-
-* Python
-* Pytest
-* HTTPX
-
-📁 Local:
-tests/test_api.py
-
----
-
-## 🧪 Testes no Postman
-
-Collection disponível em:
-
-📁 postman/collection.json
-
----
-
-## 📁 Estrutura do projeto
-
-```
-qa-user-api-tests/
- ├── docs/
- │    ├── casos-de-teste.md
- │    ├── evidencias.md
- │    ├── relatorio-bugs.md
- │    └── evidencias/
- │
- ├── tests/
- │    └── ac3_testes.py
- │    └── test_api.py
- │
- ├── postman/
- │    └── collection.json
- │
- └── README.md
-```
-
----
-
-## 👩‍💻 Autora
-
-Joice Barbosa
-
----
-
 =======
 # API de Usuários - Projeto UNIFECAF
 
@@ -179,6 +51,22 @@ Esta API permite o cadastro, consulta, atualização e exclusão de usuários. O
 - `usuarios.db`: banco de dados SQLite gerado automaticamente
 - `test_main.py`: testes automatizados dos endpoints
 
+- qa-user-api-tests/
+ ├── docs/
+ │    ├── casos-de-teste.md
+ │    ├── evidencias.md
+ │    ├── relatorio-bugs.md
+ │    └── evidencias/
+ │
+ ├── tests/
+ │    └── ac3_testes.py
+ │    └── test_api.py
+ │
+ ├── postman/
+ │    └── collection.json
+ │
+ └── README.md
+
 ## Testes Automatizados (Quality Assurance)
 
 O projeto inclui testes automatizados para garantir a qualidade e o correto funcionamento da API, cobrindo os seguintes cenários:
@@ -208,10 +96,13 @@ Os testes estão no arquivo `test_main.py` e cobrem todos os cenários exigidos 
 Você pode testar manualmente usando o Postman ou a interface Swagger UI disponível em [http://localhost:8000/docs](http://localhost:8000/docs).
 
 ## Organização do Grupo
-- Desenvolvimento: Todos
-- Testes: Emily
-- Documentação: Joice
+- Desenvolvimento: Luiz
 - Apresentação: Luiz
+- Apresentação: Adriel
+- Testes: Emily
+- Testes: Matheus
+- Documentação: Joice
+
 
 ---
 Projeto desenvolvido para a disciplina de Engenharia de Software - UNIFECAF
